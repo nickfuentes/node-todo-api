@@ -35,7 +35,6 @@ app.get('/todos', (req, res) => {
     });
 });
 
-// GET /todos/12345
 app.get('/todos/:id', (req, res) => {
     let id = req.params.id;
 
@@ -116,7 +115,6 @@ app.get('/users/me', authenticate, (req, res) => {
   res.send(req.user);
 });
 
-// POST //users/login {email, password}
 app.post('/users/login', (req, res) => {
     let body = _.pick(req.body, ['email', 'password']);
 
